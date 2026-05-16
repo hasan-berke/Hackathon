@@ -1,0 +1,11 @@
+id,sektor_adi,iade_orani_yuzde,ortalama_sepet_tl,risk_katsayisi,ortalama_kar_marji
+1,"Giyim, Ayakkabı ve Aksesuar",21.60,2910,1.50,45
+2,Elektronik,12.00,1894,1.20,25
+3,Spor ve Outdoor,11.40,2450,1.10,35
+4,Beyaz Eşya ve Küçük Ev Aletleri,7.20,10513,0.90,20
+5,"Ev, Bahçe, Mobilya ve Dekorasyon",6.60,9388,0.90,40
+6,Anne ve Bebek,6.90,1850,0.80,30
+7,Kırtasiye ve Ofis Malzemeleri,4.60,2149,0.70,35
+8,"Oyun, Oyuncak ve Hobi",3.70,1650,0.70,40
+9,Evcil Hayvan Ürünleri,3.40,1200,0.60,30
+10,"Medikal, Kişisel Bakım ve Kozmetik",3.20,3062,0.60,50

@@ -1,0 +1,877 @@
+{
+  "guncelleme_tarihi": "2026-05",
+  "para_birimi": "TRY",
+  "makro_finans": {
+    "guncel_taban_faiz": 4.61,
+    "enflasyon_beklentisi": 65.00,
+    "maksimum_kredi_vade_ay": 36,
+    "guncelleme_tarihi": "2026-05-16"
+  },
+  "sektorler": {
+    "tekstil": {
+      "ad": "Tekstil & Giyim",
+      "ort_kar_marji": "35-60%",
+      "iade_orani_yuzde": 21.60,
+      "ortalama_sepet_tl": 2910,
+      "risk_katsayisi": 1.50,
+      "zorluk_seviyesi": "orta",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "amazon_tr", "n11", "dolap"],
+      "notlar": "Türkiye'nin en büyük e-ticaret kategorisi. Sezonluk dalgalanma yüksek. Beden uyumu iade oranını artırır (%21.6 ortalama). Yerli üretim avantajı sağlar. Fast-fashion yerine sürdürülebilir tekstil büyüyor. İkinci el için Dolap güçlü alternatif.",
+      "pazar_buyuklugu_tl": "180 milyar+",
+      "buyume_orani": "%12 yıllık",
+      "rekabet": "çok yüksek",
+      "baslangic_butcesi_min": "15000",
+      "kritik_basari_faktorleri": ["görsel kalitesi", "hızlı kargo", "kolay iade", "beden tablosu"]
+    },
+    "gida": {
+      "ad": "Gıda & İçecek",
+      "ort_kar_marji": "20-45%",
+      "zorluk_seviyesi": "yüksek",
+      "lisans_gerekli": true,
+      "lisans_detay": "Gıda üretim/satış izni, SGK, vergi levhası zorunlu",
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "n11"],
+      "notlar": "Gıda güvenliği mevzuatı sıkı. Organik ve doğal ürünler büyüyor. Raf ömrü kısa ürünlerde lojistik kritik. Kuruyemiş, baharat ve ev yapımı ürünler popüler.",
+      "pazar_buyuklugu_tl": "95 milyar+",
+      "buyume_orani": "%18 yıllık",
+      "rekabet": "orta-yüksek",
+      "baslangic_butcesi_min": "20000",
+      "kritik_basari_faktorleri": ["gıda güvenliği belgesi", "ambalaj", "soğuk zincir", "son kullanma tarihi yönetimi"]
+    },
+    "kozmetik": {
+      "ad": "Kozmetik & Kişisel Bakım",
+      "ort_kar_marji": "50-80%",
+      "iade_orani_yuzde": 3.20,
+      "ortalama_sepet_tl": 3062,
+      "risk_katsayisi": 0.60,
+      "zorluk_seviyesi": "yüksek",
+      "lisans_gerekli": true,
+      "lisans_detay": "İlaç ve Tıbbi Cihaz Kurumu (TİTCK) onayı, içerik beyanı zorunlu",
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "amazon_tr", "ciceksepeti"],
+      "notlar": "En yüksek kar marjlı kategorilerden biri. Doğal/vegan ürünler trend. TİTCK onayı 3-6 ay sürebilir. Influencer pazarlaması çok etkili. Tekrar satın alma oranı yüksek. İade oranı düşük (%3.2).",
+      "pazar_buyuklugu_tl": "65 milyar+",
+      "buyume_orani": "%22 yıllık",
+      "rekabet": "yüksek",
+      "baslangic_butcesi_min": "25000",
+      "kritik_basari_faktorleri": ["TİTCK belgesi", "içerik şeffaflığı", "ambalaj estetiği", "sosyal kanıt"]
+    },
+    "teknoloji": {
+      "ad": "Teknoloji & Elektronik Aksesuarlar",
+      "ort_kar_marji": "15-35%",
+      "iade_orani_yuzde": 12.00,
+      "ortalama_sepet_tl": 1894,
+      "risk_katsayisi": 1.20,
+      "zorluk_seviyesi": "çok yüksek",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["amazon_tr", "hepsiburada", "trendyol", "n11"],
+      "notlar": "Fiyat rekabeti çok sert. CE belgesi önemli. Garanti yükümlülüğü var. Aksesuar segmenti (kılıf, şarj aleti, kablo) daha erişilebilir ama komisyon %27'ye kadar çıkabiliyor. Marka güveni kritik.",
+      "pazar_buyuklugu_tl": "120 milyar+",
+      "buyume_orani": "%15 yıllık",
+      "rekabet": "çok yüksek",
+      "baslangic_butcesi_min": "30000",
+      "kritik_basari_faktorleri": ["CE belgesi", "garanti", "teknik destek", "hızlı teslimat"]
+    },
+    "el_yapimi": {
+      "ad": "El Yapımı & Sanat Ürünleri",
+      "ort_kar_marji": "60-90%",
+      "zorluk_seviyesi": "düşük",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["etsy", "trendyol", "pazarama"],
+      "notlar": "Uluslararası pazar için Etsy ideal. Hikaye anlatımı önemli. Ölçeklenmesi zor ama marj çok yüksek. Kişiselleştirilebilir ürünler (isimli, özel tasarım) çok talep görüyor. Pazarama'da kadın girişimci el emeği ürünleri için %0 komisyon avantajı var.",
+      "pazar_buyuklugu_tl": "8 milyar+",
+      "buyume_orani": "%30 yıllık",
+      "rekabet": "düşük-orta",
+      "baslangic_butcesi_min": "3000",
+      "kritik_basari_faktorleri": ["özgün tasarım", "ürün fotoğrafçılığı", "hikaye anlatımı", "kişiselleştirme"]
+    },
+    "kitap": {
+      "ad": "Kitap & Kırtasiye & Eğitim",
+      "ort_kar_marji": "20-40%",
+      "iade_orani_yuzde": 4.60,
+      "ortalama_sepet_tl": 2149,
+      "risk_katsayisi": 0.70,
+      "zorluk_seviyesi": "düşük",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["amazon_tr", "hepsiburada", "trendyol"],
+      "notlar": "Dijital ürünler (e-kitap, PDF rehber) marjı çok yüksek. Fiziksel kitapta ISBN gerekli. Kırtasiye segmenti büyüyor. Planlayıcı ve ajanda tasarımı popüler.",
+      "pazar_buyuklugu_tl": "12 milyar+",
+      "buyume_orani": "%8 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "5000",
+      "kritik_basari_faktorleri": ["içerik kalitesi", "kapak tasarımı", "ISBN", "SEO optimizasyonu"]
+    },
+    "spor": {
+      "ad": "Spor & Outdoor",
+      "ort_kar_marji": "30-55%",
+      "iade_orani_yuzde": 11.40,
+      "ortalama_sepet_tl": 2450,
+      "risk_katsayisi": 1.10,
+      "zorluk_seviyesi": "orta",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["trendyol", "amazon_tr", "hepsiburada", "n11"],
+      "notlar": "Fitness trendi büyümekte. Yoga, pilates ekipmanları öne çıkıyor. Özel etiket (private label) mümkün. Sezonluk ürünlerden kaçınılmalı veya iyi planlanmalı.",
+      "pazar_buyuklugu_tl": "35 milyar+",
+      "buyume_orani": "%20 yıllık",
+      "rekabet": "orta-yüksek",
+      "baslangic_butcesi_min": "12000",
+      "kritik_basari_faktorleri": ["kalite sertifikası", "görsel içerik", "influencer iş birlikleri", "stok yönetimi"]
+    },
+    "ev_dekor": {
+      "ad": "Ev Dekorasyon & Yaşam",
+      "ort_kar_marji": "40-70%",
+      "iade_orani_yuzde": 6.60,
+      "ortalama_sepet_tl": 9388,
+      "risk_katsayisi": 0.90,
+      "zorluk_seviyesi": "orta",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "etsy", "ciceksepeti"],
+      "notlar": "Pandemiden bu yana sürekli büyüyor. Boho, minimalist ve vintage tarzlar popüler. Hacimli ürünlerde kargo maliyeti dikkat. El yapımı ev dekor Etsy'de yurt dışına açılıyor. ÇiçekSepeti ev yaşam kategorisi hızla büyüyor.",
+      "pazar_buyuklugu_tl": "45 milyar+",
+      "buyume_orani": "%16 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "10000",
+      "kritik_basari_faktorleri": ["estetik fotoğraf", "yaşam tarzı içerikleri", "sürdürülebilir malzeme", "hediye paketi"]
+    },
+    "evcil_hayvan": {
+      "ad": "Evcil Hayvan Ürünleri",
+      "ort_kar_marji": "25-40%",
+      "iade_orani_yuzde": 3.40,
+      "ortalama_sepet_tl": 1200,
+      "risk_katsayisi": 0.60,
+      "zorluk_seviyesi": "düşük-orta",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "amazon_tr"],
+      "notlar": "Türkiye'de evcil hayvan sahipliği hızla artıyor. Tekrar satın alma yüksek (mama, kum). Aksesuarlar (kıyafet, oyuncak) marjı yüksek. Veteriner onaylı ürünler güven veriyor.",
+      "pazar_buyuklugu_tl": "18 milyar+",
+      "buyume_orani": "%28 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "8000",
+      "kritik_basari_faktorleri": ["müşteri sadakati", "ürün güvenliği", "veteriner onayı", "sosyal medya topluluğu"]
+    },
+    "dijital_urun": {
+      "ad": "Dijital Ürünler & Yazılım",
+      "ort_kar_marji": "85-99%",
+      "zorluk_seviyesi": "düşük",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["etsy", "amazon_tr"],
+      "notlar": "Sıfır stok, sıfır kargo. Bir kez üret, sonsuz sat. Şablonlar, eğitimler, preset, font, SVG dosyaları popüler. Uluslararası satış kolay. Vergi mükellefi olunmalı.",
+      "pazar_buyuklugu_tl": "25 milyar+",
+      "buyume_orani": "%40 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "1000",
+      "kritik_basari_faktorleri": ["ürün kalitesi", "SEO", "ürün çeşitliliği", "müşteri desteği"]
+    },
+    "anne_bebek": {
+      "ad": "Anne ve Bebek Ürünleri",
+      "ort_kar_marji": "25-40%",
+      "iade_orani_yuzde": 6.90,
+      "ortalama_sepet_tl": 1850,
+      "risk_katsayisi": 0.80,
+      "zorluk_seviyesi": "orta",
+      "lisans_gerekli": true,
+      "lisans_detay": "CE belgesi ve TS EN güvenlik standardı uyumu gerekebilir; gıda niteliğindeki ürünlerde TGK onayı zorunlu",
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "ciceksepeti", "n11"],
+      "notlar": "Güvenlik standartları kritik. Organik ve doğal ürünlere talep artıyor. Tekrar satın alma oranı yüksek. Platform komisyon oranları orta seviyede.",
+      "pazar_buyuklugu_tl": "25 milyar+",
+      "buyume_orani": "%20 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "8000",
+      "kritik_basari_faktorleri": ["güvenlik belgeleri", "içerik şeffaflığı", "müşteri güveni", "hızlı kargo"]
+    },
+    "oyuncak": {
+      "ad": "Oyun, Oyuncak ve Hobi",
+      "ort_kar_marji": "35-50%",
+      "iade_orani_yuzde": 3.70,
+      "ortalama_sepet_tl": 1650,
+      "risk_katsayisi": 0.70,
+      "zorluk_seviyesi": "düşük-orta",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["trendyol", "hepsiburada", "n11", "amazon_tr"],
+      "notlar": "Sezonsal dalgalanma yüksek (yılbaşı, Çocuk Bayramı). CE güvenlik belgesi zorunlu. Eğitici oyuncaklar ve hobi ürünleri büyüyen bir segment.",
+      "pazar_buyuklugu_tl": "15 milyar+",
+      "buyume_orani": "%15 yıllık",
+      "rekabet": "orta",
+      "baslangic_butcesi_min": "7000",
+      "kritik_basari_faktorleri": ["CE güvenlik belgesi", "sezon planlaması", "yaş uygunluğu", "görsel içerik"]
+    },
+    "beyaz_esya": {
+      "ad": "Beyaz Eşya ve Küçük Ev Aletleri",
+      "ort_kar_marji": "15-25%",
+      "iade_orani_yuzde": 7.20,
+      "ortalama_sepet_tl": 10513,
+      "risk_katsayisi": 0.90,
+      "zorluk_seviyesi": "yüksek",
+      "lisans_gerekli": false,
+      "en_iyi_platformlar": ["hepsiburada", "trendyol", "n11", "amazon_tr"],
+      "notlar": "En yüksek ortalama sepet değerli kategori (10.513 TL). Kar marjı düşük ama ciro potansiyeli yüksek. Garanti ve servis ağı kritik. Büyük marka dominasyonu rekabeti zorlaştırıyor.",
+      "pazar_buyuklugu_tl": "80 milyar+",
+      "buyume_orani": "%10 yıllık",
+      "rekabet": "çok yüksek",
+      "baslangic_butcesi_min": "50000",
+      "kritik_basari_faktorleri": ["garanti yönetimi", "servis ağı", "fiyat rekabeti", "teknik destek"]
+    }
+  },
+  "platformlar": {
+    "trendyol": {
+      "ad": "Trendyol",
+      "komisyon_oranlari": {
+        "tekstil": "%19-24",
+        "gida": "%15",
+        "kozmetik": "%17",
+        "teknoloji": "%7-27",
+        "el_yapimi": "%19-24",
+        "kitap": "%10-15",
+        "spor": "%17-18",
+        "ev_dekor": "%20",
+        "evcil_hayvan": "%15",
+        "dijital_urun": "%5 (dijital hediye kartı)"
+      },
+      "komisyon_detay": {
+        "giyim": 21.36,
+        "ayakkabi": 23.39,
+        "canta": 21.36,
+        "aksesuar": 22.37,
+        "cep_telefonu": 7.0,
+        "bilgisayar": 7.5,
+        "beyaz_esya": 11.0,
+        "kozmetik": 16.78,
+        "gida": 15.25,
+        "ev_tekstili": 20.34,
+        "oyuncak": 16.5,
+        "petshop": 15.25,
+        "spor": 17.5,
+        "elektronik_aksesuar": 27.0,
+        "dijital_hediye_karti": 5.0
+      },
+      "min_komisyon": 5.0,
+      "max_komisyon": 27.0,
+      "aylik_aktif_kullanici": "30 milyon+",
+      "hedef_kitle": "18-45 yaş, geniş kitle",
+      "baslangic_gereksinim": "Vergi levhası, imza sirküleri, IBAN",
+      "entegrasyon_suresi": "1-3 gün",
+      "odeme_siklikli": "2 haftada bir",
+      "guclü_yonler": ["Türkiye'nin 1 numaralı platformu", "Yüksek trafik", "Kolay entegrasyon"],
+      "zayif_yonler": ["Yüksek komisyon (özellikle aksesuar %27)", "Fiyat rekabeti sert", "Kargo entegrasyonu zorunlu"],
+      "tavsiye_skoru": 9
+    },
+    "hepsiburada": {
+      "ad": "Hepsiburada",
+      "komisyon_oranlari": {
+        "tekstil": "%18",
+        "gida": "%15",
+        "kozmetik": "%15",
+        "teknoloji": "%4.5-23",
+        "el_yapimi": "%18",
+        "kitap": "%13",
+        "spor": "%13",
+        "ev_dekor": "%18-22",
+        "evcil_hayvan": "%13",
+        "dijital_urun": "desteklemiyor"
+      },
+      "komisyon_detay": {
+        "giyim": 18.0,
+        "ayakkabi": 18.0,
+        "canta": 18.0,
+        "elektronik_aksesuar": 23.0,
+        "cep_telefonu": 4.5,
+        "bilgisayar": 6.0,
+        "beyaz_esya": 8.5,
+        "kozmetik": 15.0,
+        "gida": 15.0,
+        "mobilya": 22.0,
+        "oyuncak": 16.0,
+        "kitap": 13.0,
+        "spor": 13.0,
+        "ev_tekstili": 18.0,
+        "petshop": 13.0
+      },
+      "min_komisyon": 4.0,
+      "max_komisyon": 23.0,
+      "aylik_aktif_kullanici": "12 milyon+",
+      "hedef_kitle": "25-50 yaş, orta-üst gelir",
+      "baslangic_gereksinim": "Vergi levhası, şirket kuruluş belgesi",
+      "entegrasyon_suresi": "3-7 gün",
+      "odeme_siklikli": "Teslimat +28 Gün (Elektronik: +14 Gün)",
+      "guclü_yonler": ["Güvenilir marka", "Kaliteli kitle", "Teknoloji ürünleri güçlü"],
+      "zayif_yonler": ["Trendyol'a göre daha düşük trafik", "Uzun ödeme vadesi"],
+      "tavsiye_skoru": 7
+    },
+    "amazon_tr": {
+      "ad": "Amazon Türkiye",
+      "komisyon_oranlari": {
+        "tekstil": "%12-17",
+        "gida": "%6-10",
+        "kozmetik": "%8-14",
+        "teknoloji": "%5-8",
+        "el_yapimi": "%12-17",
+        "kitap": "%15 (sabit)",
+        "spor": "%10-15",
+        "ev_dekor": "%10-15",
+        "evcil_hayvan": "%8-12",
+        "dijital_urun": "Kindle KDP üzerinden (yazar royalty %35-%70)"
+      },
+      "komisyon_detay": {
+        "giyim": 8.0,
+        "spor": 8.0,
+        "ev_bahce": 8.0,
+        "elektronik": 8.0,
+        "bilgisayar": 5.0,
+        "mobilya": 5.0,
+        "ev_aletleri": 5.0,
+        "guvenlik": 5.0
+      },
+      "min_komisyon": 5.0,
+      "max_komisyon": 17.0,
+      "aylik_aktif_kullanici": "8 milyon+",
+      "hedef_kitle": "Tüm yaş grupları, kalite odaklı",
+      "baslangic_gereksinim": "Vergi levhası, banka hesabı, kredi kartı",
+      "entegrasyon_suresi": "3-5 gün",
+      "odeme_siklikli": "2 haftada bir",
+      "guclü_yonler": ["Prime üye tabanı", "Global satış imkanı", "Güçlü altyapı"],
+      "zayif_yonler": ["Aylık abonelik ücreti", "FBA lojistik zorunlu olabilir"],
+      "tavsiye_skoru": 7,
+      "ozel_notlar": "komisyon_detay alanındaki oranlar 2021 dönemine aittir; güncel oranlar için Amazon Seller Central kontrol edilmeli. Kindle için komisyon kavramı farklı işler: Amazon kendi payını keser, yazar kalan royalty'yi alır."
+    },
+    "etsy": {
+      "ad": "Etsy",
+      "komisyon_oranlari": {
+        "el_yapimi": "%6.5 + liste ücreti",
+        "dijital_urun": "%6.5 + liste ücreti",
+        "ev_dekor": "%6.5 + liste ücreti",
+        "tekstil": "%6.5 + liste ücreti",
+        "diger": "%6.5 + $0.20 liste ücreti"
+      },
+      "komisyon_detay": {
+        "tum_kategoriler": 6.5,
+        "listeleme_bedeli_usd": 0.20,
+        "odeme_islemi": "6.5% + 3 TL",
+        "offsite_ads_zorunlu_esik_usd": 10000
+      },
+      "min_komisyon": 6.5,
+      "max_komisyon": 6.5,
+      "aylik_aktif_kullanici": "96 milyon+ (global)",
+      "hedef_kitle": "25-45 yaş, el yapımı/benzersiz ürün arayanlar, uluslararası",
+      "baslangic_gereksinim": "Sadece bireysel hesap, banka/PayPal",
+      "entegrasyon_suresi": "1 gün",
+      "odeme_siklikli": "Haftalık",
+      "guclü_yonler": ["Düşük komisyon", "Global kitle", "El yapımı ve dijital ürün odaklı", "Döviz geliri"],
+      "zayif_yonler": ["Türkiye'den satış için ek doğrulama", "Dolar/Euro dalgalanması riski", "Yüksek rekabet", "Offsite Ads yıllık 10.000 USD üstünde zorunlu (%15)"],
+      "tavsiye_skoru": 8
+    },
+    "pazarama": {
+      "ad": "Pazarama",
+      "komisyon_oranlari": {
+        "tekstil": "%19",
+        "gida": "%17",
+        "kozmetik": "%19",
+        "teknoloji": "%10-14",
+        "el_yapimi": "%0 (Kadın Girişimci El Emeği)",
+        "kitap": "%18",
+        "spor": "%16",
+        "ev_dekor": "belirtilmemiş",
+        "evcil_hayvan": "%17",
+        "dijital_urun": "desteklemiyor"
+      },
+      "komisyon_detay": {
+        "moda": 19.0,
+        "ayakkabi_canta": 19.0,
+        "kisisel_bakim": 19.0,
+        "anne_bebek": 18.0,
+        "kitap_oyuncak": 18.0,
+        "petshop": 17.0,
+        "gida": 17.0,
+        "elektronik": 14.0,
+        "spor": 16.0,
+        "cep_telefonu": 10.0,
+        "kadin_girisimci_el_emegi": 0.0,
+        "ciftci_kadin": 0.0
+      },
+      "min_komisyon": 0.0,
+      "max_komisyon": 19.0,
+      "aylik_aktif_kullanici": "Hızla büyüyen yeni platform",
+      "hedef_kitle": "Maximum Kart kullanıcıları, İş Bankası ekosistemi",
+      "baslangic_gereksinim": "Şahıs/Limited/Anonim Şirket",
+      "entegrasyon_suresi": "2-4 gün",
+      "odeme_siklikli": "2 haftada bir",
+      "guclü_yonler": ["İş Bankası ekosistemi desteği", "Kadın girişimci el emeği ve çiftçi kadın ürünlerinde %0 komisyon", "Alternatif kitle"],
+      "zayif_yonler": ["Trendyol ve Hepsiburada'ya göre daha düşük trafik", "Tekstil komisyonu yüksek (%19)"],
+      "tavsiye_skoru": 7
+    },
+    "n11": {
+      "ad": "N11",
+      "komisyon_oranlari": {
+        "tekstil": "%15.5-17",
+        "gida": "%9-13",
+        "kozmetik": "%9-14",
+        "teknoloji": "%7-9.5",
+        "el_yapimi": "%15.5",
+        "kitap": "belirtilmemiş",
+        "spor": "%10",
+        "ev_dekor": "%14.5",
+        "evcil_hayvan": "%13.5",
+        "dijital_urun": "desteklemiyor"
+      },
+      "komisyon_detay": {
+        "giyim": 15.5,
+        "ayakkabi": 17.0,
+        "elektronik": 9.5,
+        "cep_telefonu": 8.0,
+        "bilgisayar": 7.0,
+        "beyaz_esya": 7.0,
+        "kozmetik_dusuk": 9.0,
+        "kozmetik_yuksek": 14.0,
+        "gida_dusuk": 9.0,
+        "gida_yuksek": 13.0,
+        "mobilya": 14.5,
+        "oyuncak": 13.0,
+        "spor": 10.0,
+        "taki_dusuk": 20.0,
+        "taki_yuksek": 6.0,
+        "petshop": 13.5
+      },
+      "min_komisyon": 6.0,
+      "max_komisyon": 20.0,
+      "aylik_aktif_kullanici": "5 milyon+",
+      "hedef_kitle": "Geniş kitle, teknoloji ve genel ürünler",
+      "baslangic_gereksinim": "Vergi levhası, şirket belgesi",
+      "entegrasyon_suresi": "3-5 gün",
+      "odeme_siklikli": "Belirtilmemiş",
+      "guclü_yonler": ["Köklü ve bilinen marka", "Geniş kategori yelpazesi", "Rekabetçi komisyon oranları"],
+      "zayif_yonler": ["Trendyol ve Hepsiburada'ya göre daha düşük trafik", "Pazar payı daralıyor"],
+      "tavsiye_skoru": 6,
+      "ozel_notlar": "Gıda ve kişisel bakım için satış fiyatına göre kademeli oran. Takı 900 TL eşiği geçince oran %20'den %6'ya düşer."
+    },
+    "ciceksepeti": {
+      "ad": "ÇiçekSepeti",
+      "komisyon_oranlari": {
+        "tekstil": "%20",
+        "gida": "özel kategori (yenilebilir çiçek/hediye gıda)",
+        "kozmetik": "%13-18",
+        "teknoloji": "%5-26",
+        "el_yapimi": "belirtilmemiş",
+        "kitap": "belirtilmemiş",
+        "spor": "belirtilmemiş",
+        "ev_dekor": "%17-21",
+        "evcil_hayvan": "belirtilmemiş",
+        "dijital_urun": "desteklemiyor"
+      },
+      "komisyon_detay": {
+        "yenilebilir_cicek": 30.0,
+        "tasarim_cicek": 30.0,
+        "hediye_setleri": 25.0,
+        "moda": 20.0,
+        "ev_yasam_min": 17.0,
+        "ev_yasam_max": 21.0,
+        "kisisel_bakim_min": 13.0,
+        "kisisel_bakim_max": 18.0,
+        "anne_bebek_min": 15.0,
+        "anne_bebek_max": 25.0,
+        "elektronik_min": 5.0,
+        "elektronik_max": 26.0,
+        "oyuncak_min": 10.0,
+        "oyuncak_max": 25.0,
+        "taki_min": 4.0,
+        "taki_max": 20.0
+      },
+      "min_komisyon": 4.0,
+      "max_komisyon": 30.0,
+      "aylik_aktif_kullanici": "10 milyon+",
+      "hedef_kitle": "Hediye arayanlar, özel gün alışverişcileri, ev yaşam ürünleri",
+      "baslangic_gereksinim": "Vergi levhası, şirket belgesi",
+      "entegrasyon_suresi": "3-7 gün",
+      "odeme_siklikli": "Belirtilmemiş",
+      "guclü_yonler": ["Hediye ve özel gün odaklı satın alma niyeti yüksek kitle", "Geniş lojistik ağı", "Güçlü marka bilinirliği"],
+      "zayif_yonler": ["Çiçek/hediye dışı ürünlerde düşük keşfedilirlik", "Bazı kategorilerde çok yüksek komisyon (%30)"],
+      "tavsiye_skoru": 6
+    },
+    "dolap": {
+      "ad": "Dolap",
+      "aciklama": "İkinci el moda platformu — sadece tekstil/giyim kategorisinde faaliyet gösterir",
+      "komisyon_oranlari": {
+        "tekstil": "%15-18 veya sabit ücret",
+        "gida": "desteklemiyor",
+        "kozmetik": "desteklemiyor",
+        "teknoloji": "desteklemiyor",
+        "el_yapimi": "desteklemiyor",
+        "kitap": "desteklemiyor",
+        "spor": "desteklemiyor",
+        "ev_dekor": "desteklemiyor",
+        "evcil_hayvan": "desteklemiyor",
+        "dijital_urun": "desteklemiyor"
+      },
+      "komisyon_detay": {
+        "profesyonel_0_100tl": "20 TL sabit",
+        "profesyonel_100_9999tl": "18%",
+        "profesyonel_10000tl_uzeri": "2000 TL sabit",
+        "bireysel_0_100tl": "20 TL sabit",
+        "bireysel_100_9999tl": "15%",
+        "bireysel_10000tl_uzeri": "2000 TL sabit"
+      },
+      "min_komisyon": 15.0,
+      "max_komisyon": 20.0,
+      "aylik_aktif_kullanici": "5 milyon+",
+      "hedef_kitle": "18-35 yaş, ikinci el ve vintage moda meraklıları",
+      "baslangic_gereksinim": "Bireysel hesap veya şirket hesabı, kimlik doğrulama",
+      "entegrasyon_suresi": "1 gün",
+      "odeme_siklikli": "Satış tamamlanınca",
+      "guclü_yonler": ["İkinci el moda segmentinde lider platform", "Düşük başlangıç maliyeti", "Sürdürülebilirlik trendi ile büyüyen kitle", "Listeleme ücretsiz"],
+      "zayif_yonler": ["Yalnızca ikinci el tekstil", "Fiyat baskısı yüksek", "Diğer platformlarla entegrasyon yok"],
+      "tavsiye_skoru": 7
+    }
+  },
+  "finansman_kaynaklari": {
+    "devlet_destekleri": {
+      "kosgeb": {
+        "ad": "KOSGEB (Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi)",
+        "website": "https://www.kosgeb.gov.tr",
+        "destekler": [
+          {
+            "program": "KOSGEB Geleneksel Girişimci Desteği",
+            "aciklama": "Hizmet ve ticaret sektörleri için şahıs/şirket kuruluş ve personel performans desteği",
+            "tutar": "Geri ödemesiz hibe",
+            "faiz_durumu": "Geri Ödemesiz (Hibe)",
+            "yas_siniri": 35,
+            "kosullar": "35 yaş altı gençlere ek ödeme (pozitif ayrımcılık) yapılır",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["tekstil", "gida", "kozmetik", "el_yapimi", "ev_dekor", "kitap"],
+            "zorluk": "düşük-orta"
+          },
+          {
+            "program": "KOSGEB İleri Girişimci Desteği",
+            "aciklama": "İmalat, bilişim ve teknoloji sektörleri için makine, teçhizat, yazılım ve mentörlük giderlerini kapsar",
+            "tutar": "Geri ödemesiz hibe",
+            "faiz_durumu": "Geri Ödemesiz (Hibe)",
+            "yas_siniri": 35,
+            "kosullar": "35 yaş altı için destek üst limitleri artırılır",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["teknoloji", "dijital_urun"],
+            "zorluk": "orta"
+          },
+          {
+            "program": "KOSGEB İşletme Geliştirme Desteği",
+            "aciklama": "Mevcut işletmelerin nitelikli eleman istihdamı, marka tescili, patent ve test/analiz giderlerini karşılar",
+            "tutar": "Geri ödemesiz hibe",
+            "faiz_durumu": "Geri Ödemesiz (Hibe)",
+            "kosullar": "Mevcut işletmeler, SGK kayıtlı çalışan",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["tümü"],
+            "zorluk": "orta"
+          },
+          {
+            "program": "KOSGEB Yurt Dışı Pazar Desteği",
+            "aciklama": "E-ihracat altyapısı (Etsy, Amazon vb.), yurt dışı fuar katılımı ve yurt dışı marka tescili giderlerini destekler",
+            "tutar": "Geri ödemesiz hibe",
+            "faiz_durumu": "Geri Ödemesiz (Hibe)",
+            "kosullar": "E-ihracat faaliyeti veya yurt dışı pazar hedefi",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["el_yapimi", "tekstil", "dijital_urun", "ev_dekor"],
+            "zorluk": "orta"
+          },
+          {
+            "program": "KOSGEB KOBİGEL (Gelişim Desteği)",
+            "aciklama": "İşletmelerin dijitalleşmesi ve üretim verimliliğini artırması için dönemsel çağrılarla açılan proje bazlı destek",
+            "tutar": "Proje bazlı hibe + kredi",
+            "faiz_durumu": "Proje Bazlı Hibe + Kredi",
+            "kosullar": "Açık çağrıya uygun proje sunumu, teknik ve mali raporlama yükümlülüğü",
+            "basvuru": "kosgeb.gov.tr/proje-cagrilari",
+            "uygun_sektorler": ["teknoloji", "dijital_urun"],
+            "zorluk": "yüksek"
+          },
+          {
+            "program": "KOSGEB Ar-Ge, Ür-Ge ve İnovasyon Desteği",
+            "aciklama": "Yeni bir ürün, süreç veya yazılım geliştirmek için gereken personel, makine ve sarf malzemesi giderlerini kapsar",
+            "tutar": "Geri ödemesiz hibe",
+            "faiz_durumu": "Geri Ödemesiz (Hibe)",
+            "kosullar": "Ar-Ge veya ürün geliştirme içerikli proje, teknolojik içerik zorunlu",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["teknoloji", "dijital_urun", "kozmetik"],
+            "zorluk": "yüksek"
+          },
+          {
+            "program": "KOSGEB TEKNOYATIRIM",
+            "aciklama": "Ar-Ge sonucu ortaya çıkan stratejik ve teknolojik ürünlerin seri üretimine geçilmesi için milyon liralık yatırım desteği",
+            "tutar": "Hibe + düşük faizli kredi",
+            "azami_vade_ay": 36,
+            "odemesiz_donem_ay": 12,
+            "faiz_durumu": "Hibe + Düşük Faizli Kredi",
+            "kosullar": "Ar-Ge sonucu ortaya çıkan ürün, seri üretim aşaması",
+            "basvuru": "KOSGEB Online hizmetler portalı üzerinden",
+            "uygun_sektorler": ["teknoloji", "dijital_urun"],
+            "zorluk": "yüksek"
+          },
+          {
+            "program": "KOSGEB Finansman Destek Programı",
+            "aciklama": "KOBİ'lerin bankalardan kullanacağı ticari kredilerin faiz veya kâr payı masraflarını tamamen KOSGEB karşılar, işletme sadece anaparayı öder",
+            "azami_vade_ay": 36,
+            "faiz_durumu": "%100 Faiz/Kâr Payı Desteği",
+            "kosullar": "KOBİ statüsü, anlaşmalı bankadan kredi kullanımı",
+            "basvuru": "Anlaşmalı bankalar üzerinden KOSGEB'e yönlendirme",
+            "uygun_sektorler": ["tümü"],
+            "zorluk": "düşük-orta"
+          },
+          {
+            "program": "KOSGEB Acil Destek Kredisi",
+            "aciklama": "Doğal afet (deprem, sel vb.) veya terör olayları sonrasında zarar gören işletmelerin acil nakit ihtiyacı için",
+            "azami_vade_ay": 36,
+            "odemesiz_donem_ay": 12,
+            "faiz_durumu": "Sıfır Faizli Kredi",
+            "kosullar": "Doğal afet veya terör olayından zarar gören işletme belgesi",
+            "basvuru": "KOSGEB Online hizmetler portalı veya bağlı hizmet merkezleri",
+            "uygun_sektorler": ["tümü"],
+            "zorluk": "düşük"
+          }
+        ]
+      },
+      "tubitak": {
+        "ad": "TÜBİTAK",
+        "website": "https://www.tubitak.gov.tr",
+        "destekler": [
+          {
+            "program": "1507 - KOBİ Ar-Ge Başlangıç Destek Programı",
+            "aciklama": "KOBİ'lerin ilk Ar-Ge projelerini destekler, ürün/süreç geliştirme",
+            "tutar": "1.500.000 TL'ye kadar (geri ödemesiz hibe)",
+            "sure": "18 ay",
+            "kosullar": "KOBİ statüsü, teknolojik içerik gerektiren proje, en az 1 lisanslı çalışan",
+            "basvuru": "e-bideb.tubitak.gov.tr",
+            "uygun_sektorler": ["teknoloji", "dijital_urun", "kozmetik"],
+            "zorluk": "yüksek"
+          },
+          {
+            "program": "1512 - Teknogirişim Sermaye Desteği",
+            "aciklama": "Teknoloji tabanlı iş fikri olan bireysel girişimcilere hibe",
+            "tutar": "150.000 TL (geri ödemesiz, bireysel)",
+            "sure": "12 ay",
+            "kosullar": "Lisans/lisansüstü mezunu olmak, teknoloji tabanlı iş fikri, 35 yaş altı tercih",
+            "basvuru": "e-bideb.tubitak.gov.tr/teknogirişim",
+            "uygun_sektorler": ["teknoloji", "dijital_urun"],
+            "zorluk": "yüksek"
+          }
+        ]
+      },
+      "ticaret_bakanligi": {
+        "ad": "Ticaret Bakanlığı Destekleri",
+        "website": "https://www.ticaret.gov.tr",
+        "destekler": [
+          {
+            "program": "E-İhracat Desteği",
+            "aciklama": "Yurt dışına e-ticaret yapan firmalara pazar araştırması, platform üyeliği ve reklam desteği",
+            "tutar": "500.000 USD'ye kadar (proje bazlı)",
+            "sure": "12-24 ay",
+            "kosullar": "Türk menşeli ürün, ihracat potansiyeli, vergi mükellefi olmak",
+            "basvuru": "destekler.ticaret.gov.tr",
+            "uygun_sektorler": ["el_yapimi", "tekstil", "dijital_urun", "ev_dekor"],
+            "zorluk": "yüksek"
+          },
+          {
+            "program": "Pazar Araştırması ve Pazara Giriş Desteği",
+            "aciklama": "Yurt içi ve yurt dışı pazar araştırması giderlerinin karşılanması",
+            "tutar": "Giderlerin %70'i, max 200.000 TL",
+            "sure": "12 ay",
+            "kosullar": "Şirket statüsü, yurt dışı hedef pazar planı",
+            "basvuru": "ticaret.gov.tr/destekler",
+            "uygun_sektorler": ["tümü"],
+            "zorluk": "orta"
+          }
+        ]
+      },
+      "kalkinma_ajanslari": {
+        "ad": "Kalkınma Ajansları (BEBKA, İSTKA, IZKA vb.)",
+        "website": "https://www.kalkinma.gov.tr/ajanslar",
+        "aciklama": "Her bölge için ayrı ajans bulunmaktadır. Yıllık teknik destek ve mali destek çağrıları açılır.",
+        "ortalama_tutar": "50.000 - 500.000 TL hibe (geri ödemesiz)",
+        "kosullar": "Ajanslara bağlı bölgede faaliyet göstermek, çağrıya uygun proje",
+        "basvuru": "Her ajansin kendi online sistemi (KAYS - Kalkınma Ajansları Yönetim Sistemi)",
+        "zorluk": "orta-yüksek",
+        "not": "İstanbul için İSTKA, Bursa/Eskişehir için BEBKA, İzmir için İZKA başvurulabilir"
+      }
+    },
+    "kredi_programlari": [
+      {
+        "program": "Girişimci Kredisi",
+        "saglayanlar": "Anlaşmalı bankalar",
+        "maksimum_limit_tl": 1000000,
+        "azami_vade_ay": 36,
+        "odemesiz_donem_ay": 12,
+        "faiz_durumu": "Standart",
+        "yas_siniri": 45,
+        "kosullar": "İşini yeni kurmuş veya mevcut işini büyütme amacı taşıyan bireyler"
+      },
+      {
+        "program": "Genç Girişimci Kredisi",
+        "saglayanlar": "Anlaşmalı bankalar / KOSGEB",
+        "maksimum_limit_tl": 300000,
+        "faiz_durumu": "%100 Faiz İndirimi (Sıfır Faiz)",
+        "yas_siniri": 34,
+        "kosullar": "KOSGEB Geleneksel/İleri Girişimci mezunu esnaf ve sanatkarlar. Başka hibe/faizsiz destek kullanmamış olmalı"
+      },
+      {
+        "program": "Usta Girişimci Kredisi",
+        "saglayanlar": "Anlaşmalı bankalar",
+        "faiz_durumu": "%100 Faiz İndirimi (Sıfır Faiz)",
+        "kosullar": "En az 1 yıllık ustalık belgesine sahip, son 1 yıl içinde kendi adına işletme kurmuş esnaf ve sanatkarlar"
+      },
+      {
+        "program": "Genç İşi Kredisi (İşletme)",
+        "saglayanlar": "KGF destekli bankalar",
+        "maksimum_limit_tl": 1000000,
+        "azami_vade_ay": 36,
+        "odemesiz_donem_ay": 3,
+        "faiz_durumu": "%80 KGF Kefaleti",
+        "yas_siniri": 34,
+        "kosullar": "İmalat veya Bilişim/Yazılım sektörü. Maksimum 3 yıllık faaliyet. En az %50 paya sahip ortak 35 yaş altı olmalı"
+      },
+      {
+        "program": "Genç İşi Kredisi (Yatırım)",
+        "saglayanlar": "KGF destekli bankalar",
+        "maksimum_limit_tl": 3000000,
+        "azami_vade_ay": 60,
+        "odemesiz_donem_ay": 12,
+        "faiz_durumu": "%80 KGF Kefaleti",
+        "yas_siniri": 34,
+        "kosullar": "İmalat veya Bilişim/Yazılım sektörü. Maksimum 3 yıllık faaliyet. En az %50 paya sahip ortak 35 yaş altı olmalı"
+      },
+      {
+        "program": "İlk Adım Kredisi",
+        "saglayanlar": "KGF destekli bankalar",
+        "maksimum_limit_tl": 1000000,
+        "azami_vade_ay": 36,
+        "odemesiz_donem_ay": 6,
+        "faiz_durumu": "%80 KGF Kefaleti",
+        "yas_siniri": 29,
+        "kosullar": "Maksimum 4 yıl önce mezun olmuş kurucu ortak. Maksimum 3 yıllık faaliyet. Mezun olunan alanda faaliyet gösterilmeli"
+      },
+      {
+        "program": "Gençİz Kredisi",
+        "saglayanlar": "KGF destekli bankalar",
+        "maksimum_limit_tl": 1000000,
+        "faiz_durumu": "KGF Kefaleti (Ek Teminatsız)",
+        "yas_siniri": 29,
+        "kosullar": "30 yaş altı girişimciler. Teknokent firmaları, mezun olduğu alanda e-ticaret yapanlar veya mobil/yazılım geliştirenler"
+      }
+    ],
+    "banka_kredileri": {
+      "genel_bilgi": "Ticari bankalar KOBİ ve girişimci kredileri sunar. Faiz oranları TCMB politika faizine bağlı olarak değişir.",
+      "saglayanlar": [
+        {
+          "kurum": "Halkbank - KOBİ Destek Kredisi",
+          "website": "https://www.halkbank.com.tr",
+          "tutar": "50.000 - 5.000.000 TL",
+          "vade": "6-60 ay",
+          "faiz": "TCMB + spread (güncel için şube danışılmalı)",
+          "teminat": "Kefil veya ipotek (tutara göre değişir)",
+          "ozellik": "Devlet bankası avantajı, KOBİ'lere özel kampanyalar, KOSGEB protokolü",
+          "uygun_profil": "Tüm KOBİ'ler, özellikle üretim sektörü"
+        },
+        {
+          "kurum": "Ziraat Bankası - Genç Çiftçi / Tarım ve Gıda Kredisi",
+          "website": "https://www.ziraatbank.com.tr",
+          "tutar": "10.000 - 2.000.000 TL",
+          "vade": "12-84 ay",
+          "faiz": "Sübvansiyonlu (gıda sektörü için avantajlı)",
+          "teminat": "Kefil",
+          "ozellik": "Gıda sektörüne özel düşük faiz, tarım-gıda teşvik",
+          "uygun_profil": "Gıda, tarım, organik ürün girişimcileri"
+        },
+        {
+          "kurum": "Garanti BBVA - Girişimci Paketi",
+          "website": "https://www.garantibbva.com.tr",
+          "tutar": "25.000 - 500.000 TL",
+          "vade": "12-36 ay",
+          "faiz": "Piyasa faizi (görece avantajlı başlangıç paketi)",
+          "teminat": "Kefil (ilk 100.000 TL için kefil yeterli olabilir)",
+          "ozellik": "Dijital başvuru, hızlı onay, iş bankacılığı paketi dahil",
+          "uygun_profil": "Yeni kurulan şirketler, e-ticaret girişimcileri"
+        },
+        {
+          "kurum": "İş Bankası - KOBİ Avantaj Kredisi",
+          "website": "https://www.isbank.com.tr",
+          "tutar": "50.000 - 2.000.000 TL",
+          "vade": "12-48 ay",
+          "faiz": "Rekabetçi (KGF kefaletiyle düşer)",
+          "teminat": "KGF kefaleti veya ipotek",
+          "ozellik": "KGF (Kredi Garanti Fonu) ile kefalet imkanı, geniş şube ağı",
+          "uygun_profil": "Orta ölçekli, büyüme aşamasındaki KOBİ'ler"
+        }
+      ],
+      "kgf_bilgisi": {
+        "ad": "KGF - Kredi Garanti Fonu",
+        "website": "https://www.kgf.com.tr",
+        "aciklama": "Teminat yetersizliği olan KOBİ'lere kefalet sağlar. Anlaşmalı bankalar üzerinden başvurulur.",
+        "kefalet_orani": "Kredi tutarının %80'ine kadar",
+        "max_tutar": "5.000.000 TL",
+        "not": "Banka reddi durumunda KGF kefaleti ile tekrar başvurulabilir"
+      }
+    },
+    "ozel_fonlar_ve_yatirimcilar": {
+      "melek_yatirimci_aglari": [
+        {
+          "ad": "Türkiye Melek Yatırımcı Ağı (TBAA)",
+          "website": "https://www.tbaa.org.tr",
+          "ortalama_yatirim": "100.000 - 1.000.000 TL",
+          "beklenti": "Hisse karşılığı (%5-25 arası), güçlü büyüme potansiyeli",
+          "uygun_profil": "Teknoloji, ölçeklenebilir iş modeli, güçlü ekip"
+        },
+        {
+          "ad": "Galata Business Angels",
+          "website": "https://www.galataangels.com",
+          "ortalama_yatirim": "200.000 - 2.000.000 TL",
+          "beklenti": "Hisse karşılığı, mentörlük beklentisi",
+          "uygun_profil": "Erken aşama startuplar, teknoloji odaklı"
+        }
+      ],
+      "girisim_sermayesi": [
+        {
+          "ad": "212",
+          "website": "https://www.212.vc",
+          "odak": "Teknoloji startupları, e-ticaret, SaaS",
+          "yatirim_asamasi": "Seed - Seri A"
+        },
+        {
+          "ad": "Revo Capital",
+          "website": "https://www.revocapital.com",
+          "odak": "Teknoloji, fintech, e-ticaret",
+          "yatirim_asamasi": "Seed - Seri B"
+        }
+      ],
+      "kitle_fonlamasi": [
+        {
+          "ad": "Fongogo",
+          "website": "https://www.fongogo.com",
+          "model": "Bağış / ön satış bazlı kitlesel finansman",
+          "komisyon": "%5-8",
+          "uygun_profil": "El yapımı, yaratıcı, sanat ve tasarım projeleri",
+          "not": "Türkiye'nin en büyük kitlesel finansman platformu"
+        },
+        {
+          "ad": "Arıkovanı",
+          "website": "https://www.arikovan.com",
+          "model": "Hisse bazlı kitlesel finansman (SPK lisanslı)",
+          "komisyon": "%6-10",
+          "uygun_profil": "KOBİ'ler, hisse karşılığı büyük kitle yatırımı isteyen firmalar"
+        }
+      ]
+    },
+    "pratik_oneri": {
+      "baslangic_icin": "KOSGEB Geleneksel/İleri Girişimci Desteği + Genç Girişimci Kredisi (sıfır faiz) kombinasyonu en avantajlı başlangıç finansmanıdır.",
+      "teknoloji_icin": "TÜBİTAK 1512 bireysel başvuru yapılabilir, sonra 1507'ye geçiş planlanabilir. KOSGEB İleri Girişimci Desteği paralel değerlendirilebilir.",
+      "buyume_icin": "Kalkınma ajansı çağrıları + KGF destekli banka kredisi kombinasyonu önerilir. Genç İşi Kredisi (İşletme/Yatırım) 35 yaş altı için avantajlı.",
+      "ihracat_icin": "Ticaret Bakanlığı e-ihracat desteği + KOSGEB Yurt Dışı Pazar Desteği + Etsy kombinasyonu döviz geliri sağlar.",
+      "uyari": "KOSGEB desteği için önce kosgeb.gov.tr'den ücretsiz girişimcilik eğitimi sertifikası alınması şarttır."
+    }
+  },
+  "genel_pazar_bilgisi": {
+    "turkiye_eticaret_hacmi_2024": "1.85 trilyon TL",
+    "buyume_orani_yillik": "%102",
+    "en_cok_alim_yapilan_kategoriler": ["tekstil", "elektronik", "kozmetik", "gida", "ev_dekor"],
+    "mobil_alisveris_orani": "%75",
+    "ortalama_sepet_tutari": "520 TL",
+    "iade_orani_ortalama": "%18",
+    "kargo_suresi_beklentisi": "1-3 gün",
+    "odeme_yontemleri": ["kredi kartı", "kapıda ödeme", "havale", "BKM Express"],
+    "vergi_bilgisi": {
+      "kdv": "%20 (genel), %10 (gıda bazı), %1 (bazı ürünler)",
+      "muhtasar": "Aylık beyan zorunlu",
+      "esnaf_muafligi_limit_2024": "290.000 TL (geçilirse mükellefiyet zorunlu — güncel limit için GİB'i kontrol edin)"
+    }
+  }
+}

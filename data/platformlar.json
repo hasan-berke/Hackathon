@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "kaynak": "E-Ticaret Komisyon Oranları",
+    "guncelleme": "2024-2025",
+    "not": "Tüm komisyonlar +KDV olarak uygulanır (aksi belirtilmediği sürece)"
+  },
+  "platformlar": {
+    "hepsiburada": {
+      "isim": "Hepsiburada",
+      "odeme_vadesi": "Teslimat +28 Gün (Elektronik: +14 Gün)",
+      "min_komisyon": 4.0,
+      "max_komisyon": 23.0,
+      "populer_kategoriler": {
+        "giyim": 18.0,
+        "ayakkabi": 18.0,
+        "canta": 18.0,
+        "elektronik_aksesuar": 23.0,
+        "cep_telefonu": 4.5,
+        "bilgisayar": 6.0,
+        "beyaz_esya": 8.5,
+        "kozmetik": 15.0,
+        "gida": 15.0,
+        "mobilya": 22.0,
+        "oyuncak": 16.0,
+        "kitap": 13.0,
+        "spor": 13.0,
+        "ev_tekstili": 18.0,
+        "petshop": 13.0
+      }
+    },
+    "trendyol": {
+      "isim": "Trendyol",
+      "odeme_vadesi": "Belirtilmemiş",
+      "min_komisyon": 5.0,
+      "max_komisyon": 27.0,
+      "populer_kategoriler": {
+        "giyim": 21.36,
+        "ayakkabi": 23.39,
+        "canta": 21.36,
+        "aksesuar": 22.37,
+        "cep_telefonu": 7.0,
+        "bilgisayar": 7.5,
+        "beyaz_esya": 11.0,
+        "kozmetik": 16.78,
+        "gida": 15.25,
+        "ev_tekstili": 20.34,
+        "oyuncak": 16.5,
+        "petshop": 15.25,
+        "spor": 17.5,
+        "elektronik_aksesuar": 27.0,
+        "dijital_hediye_karti": 5.0
+      }
+    },
+    "n11": {
+      "isim": "N11",
+      "odeme_vadesi": "Belirtilmemiş",
+      "min_komisyon": 6.0,
+      "max_komisyon": 20.0,
+      "populer_kategoriler": {
+        "giyim": 15.5,
+        "ayakkabi": 17.0,
+        "elektronik": 9.5,
+        "cep_telefonu": 8.0,
+        "bilgisayar": 7.0,
+        "beyaz_esya": 7.0,
+        "kozmetik_dusuk": 9.0,
+        "kozmetik_yuksek": 14.0,
+        "gida_dusuk": 9.0,
+        "gida_yuksek": 13.0,
+        "mobilya": 14.5,
+        "oyuncak": 13.0,
+        "spor": 10.0,
+        "taki_dusuk": 20.0,
+        "taki_yuksek": 6.0,
+        "petshop": 13.5
+      },
+      "ozel_notlar": "Kişisel Bakım ve Gıda için satış fiyatına göre kademeli oran. Takı 900 TL eşiği geçince %6'ya düşer."
+    },
+    "amazon_tr": {
+      "isim": "Amazon TR",
+      "odeme_vadesi": "Belirtilmemiş",
+      "min_komisyon": 5.0,
+      "max_komisyon": 8.0,
+      "populer_kategoriler": {
+        "giyim": 8.0,
+        "spor": 8.0,
+        "ev_bahce": 8.0,
+        "elektronik": 8.0,
+        "bilgisayar": 5.0,
+        "mobilya": 5.0,
+        "ev_aletleri": 5.0,
+        "guvenlik": 5.0
+      },
+      "ozel_notlar": "2021 verileri, güncel oranlar için Amazon Seller Central kontrol edilmeli"
+    },
+    "pazarama": {
+      "isim": "Pazarama",
+      "odeme_vadesi": "Belirtilmemiş",
+      "min_komisyon": 0.0,
+      "max_komisyon": 19.0,
+      "populer_kategoriler": {
+        "moda": 19.0,
+        "ayakkabi_canta": 19.0,
+        "kisisel_bakim": 19.0,
+        "anne_bebek": 18.0,
+        "kitap_oyuncak": 18.0,
+        "petshop": 17.0,
+        "gida": 17.0,
+        "elektronik": 14.0,
+        "spor": 16.0,
+        "cep_telefonu": 10.0,
+        "kadin_girisimci_el_emegi": 0.0,
+        "ciftci_kadin": 0.0
+      },
+      "ozel_notlar": "Kadın Girişimci El Emeği ve Çiftçi Kadın ürünlerinde komisyon alınmaz"
+    },
+    "ciceksepeti": {
+      "isim": "ÇiçekSepeti",
+      "odeme_vadesi": "Belirtilmemiş",
+      "min_komisyon": 4.0,
+      "max_komisyon": 30.0,
+      "populer_kategoriler": {
+        "yenilebilir_cicek": 30.0,
+        "tasarim_cicek": 30.0,
+        "hediye_setleri": 25.0,
+        "moda": 20.0,
+        "ev_yasam": "17-21",
+        "kisisel_bakim": "13-18",
+        "anne_bebek": "15-25",
+        "elektronik": "5-26",
+        "oyuncak": "10-25",
+        "taki": "4-20"
+      }
+    },
+    "dolap": {
+      "isim": "Dolap",
+      "odeme_vadesi": "Belirtilmemiş",
+      "aciklama": "İkinci el moda platformu",
+      "komisyon_yapisi": {
+        "profesyonel_0_100": "20 TL sabit",
+        "profesyonel_100_9999": "18%",
+        "profesyonel_10000_uzeri": "2000 TL sabit",
+        "bireysel_0_100": "20 TL sabit",
+        "bireysel_100_9999": "15%",
+        "bireysel_10000_uzeri": "2000 TL sabit"
+      },
+      "ozel_notlar": "Listeleme ücretsiz, sadece tamamlanan satışlardan komisyon alınır"
+    },
+    "etsy": {
+      "isim": "Etsy",
+      "odeme_vadesi": "Belirtilmemiş",
+      "listeleme_bedeli": "0.20 USD/ürün",
+      "populer_kategoriler": {
+        "tum_kategoriler": 6.5
+      },
+      "ek_ucretler": {
+        "odeme_islemi": "6.5% + 3 TL",
+        "offsite_ads": "15% (yıllık 10.000 USD üstü için zorunlu)"
+      },
+      "ozel_notlar": "El yapımı, vintage ve özgün ürünler için ideal. Tüm kategorilerde aynı komisyon oranı."
+    }
+  }
+}

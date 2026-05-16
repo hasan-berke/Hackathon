@@ -1,0 +1,17 @@
+id,kredi_programi,maksimum_limit_tl,azami_vade_ay,odemesiz_donem_ay,faiz_durumu,yas_siniri,ozel_sartlar
+1,Girişimci Kredisi,1000000,36,12,Standart,45,İşini yeni kurmuş veya mevcut işini büyütme amacı taşıyan bireyler.
+2,Genç Girişimci Kredisi,300000,,,%100 Faiz İndirimi (Sıfır Faiz),34,KOSGEB Geleneksel/İleri Girişimci mezunu esnaf ve sanatkarlar. Başka hibe/faizsiz destek kullanmamış olmalı.
+3,Usta Girişimci Kredisi,,,,%100 Faiz İndirimi (Sıfır Faiz),,"En az 1 yıllık ustalık belgesine sahip, son 1 yıl içinde kendi adına işletme kurmuş esnaf ve sanatkarlar."
+4,Genç İşi Kredisi (İşletme),1000000,36,3,%80 KGF Kefaleti,34,İmalat veya Bilişim/Yazılım sektörü. Maksimum 3 yıllık faaliyet. En az %50 paya sahip ortak 35 yaş altı olmalı.
+5,Genç İşi Kredisi (Yatırım),3000000,60,12,%80 KGF Kefaleti,34,İmalat veya Bilişim/Yazılım sektörü. Maksimum 3 yıllık faaliyet. En az %50 paya sahip ortak 35 yaş altı olmalı.
+6,İlk Adım Kredisi,1000000,36,6,%80 KGF Kefaleti,29,Maksimum 4 yıl önce mezun olmuş kurucu ortak. Maksimum 3 yıllık faaliyet. Mezun olunan alanda faaliyet gösterilmeli.
+7,Gençİz Kredisi,1000000,,,KGF Kefaleti (Ek Teminatsız),29,"30 yaş altı girişimciler. Teknokent firmaları, mezun olduğu alanda e-ticaret yapanlar veya mobil/yazılım geliştirenler."
+8,KOSGEB Geleneksel Girişimci Desteği,,,,Geri Ödemesiz (Hibe),35,Hizmet ve ticaret sektörleri için şahıs/şirket kuruluş ve personel performans desteği. 35 yaş altı gençlere ek ödeme (pozitif ayrımcılık) yapılır.
+9,KOSGEB İleri Girişimci Desteği,,,,Geri Ödemesiz (Hibe),35,"İmalat, bilişim ve teknoloji sektörleri için. Makine, teçhizat, yazılım ve mentörlük giderlerini kapsar. 35 yaş altı için destek üst limitleri artırılır."
+10,KOSGEB İşletme Geliştirme Desteği,,,,Geri Ödemesiz (Hibe),,"Mevcut işletmelerin nitelikli eleman istihdamı, marka tescili, patent ve test/analiz giderlerini karşılar."
+11,KOSGEB Yurt Dışı Pazar Desteği,,,,Geri Ödemesiz (Hibe),,"E-ihracat altyapısı (Etsy, Amazon vb.), yurt dışı fuar katılımı ve yurt dışı marka tescili giderlerini destekler."
+12,KOSGEB KOBİGEL (Gelişim Desteği),,,,Proje Bazlı Hibe + Kredi,,İşletmelerin dijitalleşmesi ve üretim verimliliğini artırması için dönemsel çağrılarla açılan proje bazlı destek.
+13,"KOSGEB Ar-Ge, Ür-Ge ve İnovasyon",,,,Geri Ödemesiz (Hibe),,"Yeni bir ürün, süreç veya yazılım geliştirmek için gereken personel, makine ve sarf malzemesi giderlerini kapsar."
+14,KOSGEB TEKNOYATIRIM,,36,12,Hibe + Düşük Faizli Kredi,,Ar-Ge sonucu ortaya çıkan stratejik ve teknolojik ürünlerin seri üretimine geçilmesi için milyon liralık yatırım desteği.
+15,KOSGEB Finansman Destek Programı,,36,,%100 Faiz/Kâr Payı Desteği,,"KOBİ'lerin bankalardan kullanacağı ticari kredilerin faiz veya kâr payı masraflarını tamamen KOSGEB karşılar, işletme sadece anaparayı öder."
+16,KOSGEB Acil Destek Kredisi,,36,12,Sıfır Faizli Kredi,,"Doğal afet (deprem, sel vb.) veya terör olayları sonrasında zarar gören işletmelerin acil nakit ihtiyacı için."
