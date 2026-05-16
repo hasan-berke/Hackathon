@@ -13,9 +13,9 @@ export async function POST(request) {
     const body = await request.json();
     const { user_data, step2_result } = body;
 
-    if (!user_data || !step2_result) {
+    if (!user_data) {
       return NextResponse.json(
-        { hata: "user_data ve step2_result alanları zorunludur.", basarili: false },
+        { hata: "user_data alanı zorunludur.", basarili: false },
         { status: 400 }
       );
     }
@@ -24,9 +24,12 @@ export async function POST(request) {
     const pazarVerisi = getPazarVerisi();
     const systemPrompt = buildSystemPrompt(pazarVerisi);
 
-    // Kullanıcı promptunu oluştur
-    const userPrompt = `Girişimci: ${JSON.stringify(user_data, null, 2)}
-Analiz: ${JSON.stringify(step2_result, null, 2)}
+    // Kullanıcı promptunu oluştur (analiz varsa ekle, yoksa sadece profille çalış)
+    const analizKisim = step2_result
+      ? `\nAnaliz: ${JSON.stringify(step2_result, null, 2)}`
+      : "";
+
+    const userPrompt = `Girişimci: ${JSON.stringify(user_data, null, 2)}${analizKisim}
 
 5 marka ismi öner. Döndür (yalnızca JSON):
 {

@@ -29,12 +29,16 @@ export default function Wizard() {
   });
 
   // Results State
-  const [analiz, setAnaliz] = useState(null);
   const [isimler, setIsimler] = useState(null);
   const [chosenName, setChosenName] = useState("");
+  const [analiz, setAnaliz] = useState(null);
   const [platformlar, setPlatformlar] = useState(null);
   const [finansman, setFinansman] = useState(null);
   const [yolHaritasi, setYolHaritasi] = useState(null);
+
+  // Carousel indices for Analiz step
+  const [firsatIdx, setFirsatIdx] = useState(0);
+  const [riskIdx, setRiskIdx] = useState(0);
 
   const totalSteps = 6;
 
@@ -45,7 +49,23 @@ export default function Wizard() {
 
     try {
       if (step === 1) {
-        // Profil -> Analiz
+        // Veri zaten varsa direkt ilerle
+        if (isimler) { setStep(2); setLoading(false); return; }
+        const res = await fetch("/api/isimler", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_data: formData }),
+        });
+        const data = await res.json();
+        if (!data.basarili) throw new Error(data.hata);
+        setIsimler(data.veri.isimler);
+        setFirsatIdx(0);
+        setRiskIdx(0);
+        setStep(2);
+      } else if (step === 2) {
+        if (!chosenName) throw new Error("Lütfen devam etmek için bir marka ismi seçin.");
+        // Veri zaten varsa direkt ilerle
+        if (analiz) { setStep(3); setLoading(false); return; }
         const res = await fetch("/api/analiz", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -54,21 +74,10 @@ export default function Wizard() {
         const data = await res.json();
         if (!data.basarili) throw new Error(data.hata);
         setAnaliz(data.veri);
-        setStep(2);
-      } else if (step === 2) {
-        // Analiz -> İsim
-        const res = await fetch("/api/isimler", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ user_data: formData, step2_result: analiz }),
-        });
-        const data = await res.json();
-        if (!data.basarili) throw new Error(data.hata);
-        setIsimler(data.veri.isimler);
         setStep(3);
       } else if (step === 3) {
-        // İsim -> Marketplace
-        if (!chosenName) throw new Error("Lütfen devam etmek için bir marka ismi seçin.");
+        // Veri zaten varsa direkt ilerle
+        if (platformlar) { setStep(4); setLoading(false); return; }
         const res = await fetch("/api/marketplace", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -79,7 +88,8 @@ export default function Wizard() {
         setPlatformlar(data.veri.platformlar);
         setStep(4);
       } else if (step === 4) {
-        // Marketplace -> Finansman
+        // Veri zaten varsa direkt ilerle
+        if (finansman) { setStep(5); setLoading(false); return; }
         const res = await fetch("/api/finansman", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -90,7 +100,8 @@ export default function Wizard() {
         setFinansman(data.veri);
         setStep(5);
       } else if (step === 5) {
-        // Finansman -> Yol Haritası
+        // Veri zaten varsa direkt ilerle
+        if (yolHaritasi) { setStep(6); setLoading(false); return; }
         const allContext = {
           profil: formData,
           analiz,
@@ -115,6 +126,7 @@ export default function Wizard() {
     }
   };
 
+
   const renderLoader = (text) => (
     <div className="loader-wrap">
       <div className="spinner"></div>
@@ -125,7 +137,7 @@ export default function Wizard() {
   return (
     <div className="wizard-wrap">
       <header className="wizard-header">
-        <Link href="/" className="wizard-logo">🌱 Filiz</Link>
+        <Link href="/" className="wizard-logo">Filiz 🌱</Link>
         <div className="progress-bar">
           {[1, 2, 3, 4, 5, 6].map((i) => (
             <div
@@ -187,53 +199,10 @@ export default function Wizard() {
         </div>
       )}
 
-      {/* --- STEP 2: ANALIZ --- */}
-      {step === 2 && !loading && analiz && (
+      {/* --- STEP 2: MARKA İSMİ --- */}
+      {step === 2 && !loading && isimler && (
         <div className="step-card">
           <div className="step-label">Adım 2 / 6</div>
-          <h2 className="step-title">Sektör Analizi</h2>
-          <p className="step-desc">Seçtiğin pazarın güncel fotoğrafı.</p>
-
-          <div className="result-section">
-            <p className="result-text">{analiz.pazar_ozeti}</p>
-          </div>
-
-          <div className="result-section">
-            <h3>Fırsatlar</h3>
-            <div className="pill-list">
-              {analiz.firsatlar?.map((f, i) => <span key={i} className="pill pill-green">{f}</span>)}
-            </div>
-          </div>
-
-          <div className="result-section">
-            <h3>Riskler</h3>
-            <div className="pill-list">
-              {analiz.riskler?.map((r, i) => <span key={i} className="pill pill-red">{r}</span>)}
-            </div>
-          </div>
-
-          <div className="result-section">
-            <h3>Bütçe & Tavsiye</h3>
-            <p className="result-text" style={{ fontSize: '0.85rem' }}>{analiz.butce_degerlendirmesi}</p>
-            <p className="result-text" style={{ marginTop: '0.5rem', color: 'var(--accent)' }}>{analiz.tavsiye}</p>
-          </div>
-
-          <div className="score-bar-wrap">
-            <div className="score-label">
-              <span>Potansiyel Skoru</span>
-              <span>{analiz.devam_skoru}/100</span>
-            </div>
-            <div className="score-track">
-              <div className="score-fill" style={{ width: `${analiz.devam_skoru}%` }} />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* --- STEP 3: İSİM --- */}
-      {step === 3 && !loading && isimler && (
-        <div className="step-card">
-          <div className="step-label">Adım 3 / 6</div>
           <h2 className="step-title">Marka İsmi</h2>
           <p className="step-desc">Senin için 5 farklı konsept geliştirdim. Birini seç.</p>
 
@@ -249,6 +218,105 @@ export default function Wizard() {
                 <div className="name-card-desc">{item.neden_uygun}</div>
               </button>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* --- STEP 3: ANALİZ --- */}
+      {step === 3 && !loading && analiz && (
+        <div className="step-card">
+          <div className="step-label">Adım 3 / 6</div>
+          <h2 className="step-title">Sektör Analizi</h2>
+          <p className="step-desc">"{chosenName}" markası için seçtiğin pazarın güncel fotoğrafı.</p>
+
+          <div className="result-section">
+            <p className="result-text">{analiz.pazar_ozeti}</p>
+          </div>
+
+          {/* Fırsatlar Carousel */}
+          {analiz.firsatlar?.length > 0 && (
+            <div className="result-section">
+              <div className="carousel-header">
+                <h3>Fırsatlar</h3>
+                <span className="carousel-counter">{firsatIdx + 1} / {analiz.firsatlar.length}</span>
+              </div>
+              <div className="carousel-card carousel-green">
+                <div className="carousel-icon">✦</div>
+                <p className="carousel-text">{analiz.firsatlar[firsatIdx]}</p>
+              </div>
+              <div className="carousel-nav">
+                <button
+                  className="carousel-btn"
+                  onClick={() => setFirsatIdx(i => Math.max(0, i - 1))}
+                  disabled={firsatIdx === 0}
+                >←</button>
+                <div className="carousel-dots">
+                  {analiz.firsatlar.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`carousel-dot ${i === firsatIdx ? 'active-green' : ''}`}
+                      onClick={() => setFirsatIdx(i)}
+                    />
+                  ))}
+                </div>
+                <button
+                  className="carousel-btn"
+                  onClick={() => setFirsatIdx(i => Math.min(analiz.firsatlar.length - 1, i + 1))}
+                  disabled={firsatIdx === analiz.firsatlar.length - 1}
+                >→</button>
+              </div>
+            </div>
+          )}
+
+          {/* Riskler Carousel */}
+          {analiz.riskler?.length > 0 && (
+            <div className="result-section">
+              <div className="carousel-header">
+                <h3 style={{ color: 'var(--danger)' }}>Riskler</h3>
+                <span className="carousel-counter">{riskIdx + 1} / {analiz.riskler.length}</span>
+              </div>
+              <div className="carousel-card carousel-red">
+                <div className="carousel-icon" style={{ color: 'var(--danger)' }}>⚠</div>
+                <p className="carousel-text">{analiz.riskler[riskIdx]}</p>
+              </div>
+              <div className="carousel-nav">
+                <button
+                  className="carousel-btn carousel-btn-red"
+                  onClick={() => setRiskIdx(i => Math.max(0, i - 1))}
+                  disabled={riskIdx === 0}
+                >←</button>
+                <div className="carousel-dots">
+                  {analiz.riskler.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`carousel-dot ${i === riskIdx ? 'active-red' : ''}`}
+                      onClick={() => setRiskIdx(i)}
+                    />
+                  ))}
+                </div>
+                <button
+                  className="carousel-btn carousel-btn-red"
+                  onClick={() => setRiskIdx(i => Math.min(analiz.riskler.length - 1, i + 1))}
+                  disabled={riskIdx === analiz.riskler.length - 1}
+                >→</button>
+              </div>
+            </div>
+          )}
+
+          <div className="result-section">
+            <h3>Bütçe & Tavsiye</h3>
+            <p className="result-text" style={{ fontSize: '0.85rem' }}>{analiz.butce_degerlendirmesi}</p>
+            <p className="result-text" style={{ marginTop: '0.5rem', color: 'var(--accent)' }}>{analiz.tavsiye}</p>
+          </div>
+
+          <div className="score-bar-wrap">
+            <div className="score-label">
+              <span>Potansiyel Skoru</span>
+              <span>{analiz.devam_skoru}/100</span>
+            </div>
+            <div className="score-track">
+              <div className="score-fill" style={{ width: `${analiz.devam_skoru}%` }} />
+            </div>
           </div>
         </div>
       )}
@@ -360,8 +428,8 @@ export default function Wizard() {
 
       {/* --- LOADER --- */}
       {loading && (
-        step === 1 ? renderLoader("Pazar verileri işleniyor...") :
-        step === 2 ? renderLoader("Marka konseptleri üretiliyor...") :
+        step === 1 ? renderLoader("Marka konseptleri üretiliyor...") :
+        step === 2 ? renderLoader("Pazar verileri işleniyor...") :
         step === 3 ? renderLoader("Algoritmalar platform komisyonlarını karşılaştırıyor...") :
         step === 4 ? renderLoader("Uygun finansman ve hibe kaynakları taranıyor...") :
         renderLoader("Aksiyon planı oluşturuluyor...")
@@ -375,8 +443,8 @@ export default function Wizard() {
           )}
           {step < 6 && (
             <button className="btn-next" onClick={handleNext}>
-              {step === 1 ? "Analiz Et" :
-               step === 2 ? "İsim Öner" :
+              {step === 1 ? "Marka İsmi Öner" :
+               step === 2 ? "Sektör Analizi Yap" :
                step === 3 ? "Platform Öner" :
                step === 4 ? "Finansman Bul" :
                "Yol Haritası Çıkar"}
@@ -390,3 +458,4 @@ export default function Wizard() {
     </div>
   );
 }
+
