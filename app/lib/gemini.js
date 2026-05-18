@@ -2,7 +2,24 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+/**
+ * Mevcut tüm API key'leri listeden döndürür.
+ * Önce numaralı key'lere bakar (KEY_1, KEY_2, KEY_3),
+ * sonra fallback olarak ana GEMINI_API_KEY'i ekler.
+ */
+function getApiKeys() {
+  const keys = [];
+  for (let i = 1; i <= 5; i++) {
+    const k = process.env[`GEMINI_API_KEY_${i}`];
+    if (k && k.trim()) keys.push(k.trim());
+  }
+  // Ana key'i de ekle (zaten yukarıdakilerden biri değilse)
+  const mainKey = process.env.GEMINI_API_KEY;
+  if (mainKey && mainKey.trim() && !keys.includes(mainKey.trim())) {
+    keys.push(mainKey.trim());
+  }
+  return keys;
+}
 
 /**
  * Pazar verisini /data/pazar.json'dan okur
@@ -31,20 +48,47 @@ Sadece JSON döndür, başka hiçbir şey yazma.`;
 }
 
 /**
- * Gemini 1.5 Flash'a istek gönderir
+ * Gemini Flash'a istek gönderir.
+ * Birden fazla API key varsa, 429/403 hatalarında sıradakine geçer.
  * @param {string} systemPrompt
  * @param {string} userPrompt
  * @returns {Promise<string>}
  */
 export async function callGemini(systemPrompt, userPrompt) {
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash",
-    systemInstruction: systemPrompt,
-  });
+  const keys = getApiKeys();
+  if (keys.length === 0) {
+    throw new Error("Hiçbir Gemini API key bulunamadı. .env.local dosyasını kontrol edin.");
+  }
 
-  const result = await model.generateContent(userPrompt);
-  const response = await result.response;
-  return response.text();
+  let lastError;
+  for (let i = 0; i < keys.length; i++) {
+    try {
+      console.log(`[Gemini] Key #${i + 1} deneniyor...`);
+      const genAI = new GoogleGenerativeAI(keys[i]);
+      const model = genAI.getGenerativeModel({
+        model: "gemini-2.5-flash",
+        systemInstruction: systemPrompt,
+      });
+      const result = await model.generateContent(userPrompt);
+      const response = await result.response;
+      console.log(`[Gemini] Key #${i + 1} başarılı.`);
+      return response.text();
+    } catch (err) {
+      const msg = err?.message || "";
+      const isRetryable =
+        msg.includes("429") || msg.includes("quota") ||
+        msg.includes("403") || msg.includes("leaked") ||
+        msg.includes("RESOURCE_EXHAUSTED");
+
+      if (isRetryable && i < keys.length - 1) {
+        console.warn(`[Gemini] Key #${i + 1} başarısız (${msg.slice(0, 60)}...), sonraki key deneniyor.`);
+        lastError = err;
+        continue;
+      }
+      throw err; // Retry edilemez hata veya son key — fırlat
+    }
+  }
+  throw lastError;
 }
 
 /**
