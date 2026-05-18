@@ -204,7 +204,7 @@ export default function Wizard() {
         <div className="step-card">
           <div className="step-label">Adım 2 / 6</div>
           <h2 className="step-title">Marka İsmi</h2>
-          <p className="step-desc">Senin için 5 farklı konsept geliştirdim. Birini seç.</p>
+          <p className="step-desc">Senin için 5 farklı konsept geliştirdim. Birini seç ya da kendi ismini yaz.</p>
 
           <div className="name-grid">
             {isimler.map((item, i) => (
@@ -219,8 +219,31 @@ export default function Wizard() {
               </button>
             ))}
           </div>
+
+          {/* Kendi ismini yaz */}
+          <div className="custom-name-wrap">
+            <div className="custom-name-label">
+              <span>✏️</span> Ya da kendi marka ismini yaz
+            </div>
+            <div className="custom-name-row">
+              <input
+                type="text"
+                className="custom-name-input"
+                placeholder="örn. Sepetim, NovaBrand, Atölye7..."
+                value={isimler.find(x => x.isim === chosenName) ? "" : (chosenName || "")}
+                onChange={(e) => setChosenName(e.target.value)}
+                onFocus={() => {
+                  if (isimler.find(x => x.isim === chosenName)) setChosenName("");
+                }}
+              />
+              {chosenName && !isimler.find(x => x.isim === chosenName) && (
+                <span className="custom-name-badge">✓ Seçildi</span>
+              )}
+            </div>
+          </div>
         </div>
       )}
+
 
       {/* --- STEP 3: ANALİZ --- */}
       {step === 3 && !loading && analiz && (
