@@ -113,7 +113,8 @@ export function parseGeminiResponse(raw) {
  */
 export function buildErrorResponse(err, status = 500) {
   console.error(">>> GEMINI API HATASI:", err);
-  let mesaj = "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.";
+  // Hatanın aslını da döndürerek Vercel'de ne olduğunu anlayalım
+  let mesaj = `Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin. (Hata detayı: ${err?.message || "Bilinmiyor"})`;
 
   if (err instanceof Error) {
     if (err.message.includes("API_KEY") || err.message.includes("401")) {
