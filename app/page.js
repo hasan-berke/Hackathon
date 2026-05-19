@@ -227,32 +227,53 @@ export default function Home() {
         <div className="how-bg"><div className="blob-warm" /><div className="blob-cool" /></div>
         <div className="section-head">
           <span className="section-eyebrow">Nasıl Çalışır</span>
-          <h2 className="section-title">Üç adımda <span className="accent">fikrinden</span> markana</h2>
-          <p className="section-sub">Profil bilgilerinden yola çıkarak AI sana özel marka ismi, pazar analizi, platform önerisi ve finansman rehberi üretir.</p>
+          <h2 className="section-title">Altı adımda <span className="accent">fikrinden</span> markana</h2>
+          <p className="section-sub">Profil bilgilerinden yola çıkarak AI sana özel marka ismi, sektör analizi, riskler, platform önerisi, finansman rehberi ve yol haritası üretir.</p>
         </div>
-        <div className="steps">
+        <div className="steps steps-6">
+          {/* Arka plan bağlantı çizgileri (CSS cache'e takılmaması için explicit) */}
+          <div className="row-line row-line-1" />
+          <div className="row-line row-line-2" />
+          
           <div className="glass step">
             <span className="step-num">ADIM 01</span>
             <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="10" width="48" height="44" rx="6"/><path d="M16 22h32M16 32h22M16 42h16"/><circle cx="48" cy="42" r="6" fill="currentColor" opacity=".25"/><path d="M44 42l3 3 5-6"/></svg></div>
             <h3>Profilini Oluştur</h3>
-            <p>Yaşın, başlangıç bütçen ve hedef sektörünü gir. Bir de kısa fikir özetin varsa ekle — AI sana özel analiz başlasın.</p>
-            <svg className="arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M10 20h22M24 12l8 8-8 8"/></svg>
+            <p>Yaşın, başlangıç bütçen ve hedef sektörünü gir. Bir de kısa fikir özetin varsa ekle.</p>
           </div>
           <div className="glass step">
             <span className="step-num">ADIM 02</span>
-            <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="32" cy="32" r="14"/><path d="M32 18v6M32 40v6M18 32h6M40 32h6M22 22l4 4M38 38l4 4M22 42l4-4M38 26l4-4"/><circle cx="32" cy="32" r="4" fill="currentColor"/></svg></div>
-            <h3>Marka & Analiz</h3>
-            <p>AI önce sana 5 marka ismi konsepti sunar, seçtikten sonra sektör analizi, platform önerileri ve finansman kaynaklarını çıkarır.</p>
-            <svg className="arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M10 20h22M24 12l8 8-8 8"/></svg>
+            <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M10 12h6l4 28a4 4 0 0 0 4 3h24a4 4 0 0 0 4-3l3-18H18"/><circle cx="24" cy="52" r="3"/><circle cx="44" cy="52" r="3"/></svg></div>
+            <h3>Marka İsmini Seç</h3>
+            <p>AI sektörüne ve hedef kitlenë uygun 5 farklı marka ismi konsepti önerir. Sen seçersin ya da kendi ismini yazarsın.</p>
           </div>
           <div className="glass step">
             <span className="step-num">ADIM 03</span>
+            <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="32" cy="32" r="14"/><path d="M32 18v6M32 40v6M18 32h6M40 32h6M22 22l4 4M38 38l4 4M22 42l4-4M38 26l4-4"/><circle cx="32" cy="32" r="4" fill="currentColor"/></svg></div>
+            <h3>Sektör Analizi</h3>
+            <p>Pazarın büyüklüğü, fırsatlar ve <strong>riskler</strong> detaylı analiz edilir. Potansiyel skoru ile ilerleyip ilerlemeyeceğini gör.</p>
+          </div>
+          <div className="glass step">
+            <span className="step-num">ADIM 04</span>
+            <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M24 6L8 12v16c0 14 8 22 16 26 8-4 16-12 16-26V12z"/><path d="M18 32l6 6 12-14"/></svg></div>
+            <h3>Satış Platformu</h3>
+            <p>Trendyol, Hepsiburada, Amazon TR, Etsy ve dahası. Ürününe en uygun kanallar gerçek komisyon verileriyle karşılaştırılır.</p>
+          </div>
+          <div className="glass step">
+            <span className="step-num">ADIM 05</span>
+            <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 24h48"/><path d="M16 40h10M30 40h6"/></svg></div>
+            <h3>Finansman Rehberi</h3>
+            <p>KOSGEB hibeleri, KGF kredileri ve TÜBİTAK destekleri dahil bütçene uygun kaynaklar ve başvuru adımları listelenir.</p>
+          </div>
+          <div className="glass step">
+            <span className="step-num">ADIM 06</span>
             <div className="step-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M32 8L8 20v24l24 12 24-12V20z"/><path d="M8 20l24 12 24-12"/><path d="M32 32v24"/><path d="M20 14l24 12"/></svg></div>
             <h3>Yol Haritanı Al</h3>
             <p>İlk 30 gün, 3 ay ve 6 aylık aksiyon planın hazır. Her adım önceliklendirilmiş, somut görevler halinde.</p>
           </div>
         </div>
       </section>
+
 
       <div className="divider" />
 

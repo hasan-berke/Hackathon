@@ -522,6 +522,21 @@ textarea { resize: vertical; min-height: 80px; }
 .btn-next:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 0 35px var(--accent-glow); }
 .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
 
+/* ── Field Validation ── */
+.field-required {
+  color: var(--danger);
+  font-size: 0.78rem;
+  margin-left: 2px;
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+  margin-top: 0.25rem;
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
 /* ── Error ── */
 .error-box {
   background: rgba(248,113,113,0.08);
@@ -531,7 +546,33 @@ textarea { resize: vertical; min-height: 80px; }
   font-size: 0.85rem;
   color: var(--danger);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
+
+.retry-btn {
+  padding: 0.45rem 1.1rem;
+  background: rgba(248,113,113,0.12);
+  border: 1px solid rgba(248,113,113,0.35);
+  border-radius: 50px;
+  color: var(--danger);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.retry-btn:hover {
+  background: rgba(248,113,113,0.22);
+  border-color: rgba(248,113,113,0.6);
+  transform: translateY(-1px);
+}
+
 
 /* ── Scroll ── */
 ::-webkit-scrollbar { width: 4px; }

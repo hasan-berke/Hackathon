@@ -19,6 +19,7 @@ export default function Wizard() {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [fieldErrors, setFieldErrors] = useState({});
 
   // Form State
   const [formData, setFormData] = useState({
@@ -43,14 +44,30 @@ export default function Wizard() {
   const totalSteps = 6;
 
   // --- Handlers ---
+  const validateStep1 = () => {
+    const errs = {};
+    const yas = Number(formData.yas);
+    const butce = Number(formData.butce);
+    if (!formData.yas || isNaN(yas) || yas < 10 || yas > 100) {
+      errs.yas = "Geçerli bir yaş girin (10–100).";
+    }
+    if (!formData.butce || isNaN(butce) || butce <= 0) {
+      errs.butce = "Başlangıç bütçenizi girin (0 TL'den fazla).";
+    }
+    setFieldErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
   const handleNext = async () => {
     setError(null);
+    setFieldErrors({});
     setLoading(true);
 
     try {
       if (step === 1) {
         // Veri zaten varsa direkt ilerle
         if (isimler) { setStep(2); setLoading(false); return; }
+        if (!validateStep1()) { setLoading(false); return; }
         const res = await fetch("/api/isimler", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -148,7 +165,12 @@ export default function Wizard() {
         </div>
       </header>
 
-      {error && <div className="error-box">{error}</div>}
+      {error && (
+        <div className="error-box">
+          <span>{error}</span>
+          <button className="retry-btn" onClick={handleNext}>↩ Tekrar Dene</button>
+        </div>
+      )}
 
       {/* --- STEP 1: PROFIL --- */}
       {step === 1 && (
@@ -159,22 +181,26 @@ export default function Wizard() {
 
           <div className="form-grid">
             <div className="form-group">
-              <label>Yaş</label>
+              <label>Yaş <span className="field-required">*</span></label>
               <input
                 type="number"
                 placeholder="Örn: 28"
                 value={formData.yas}
-                onChange={(e) => setFormData({ ...formData, yas: e.target.value })}
+                onChange={(e) => { setFormData({ ...formData, yas: e.target.value }); setFieldErrors(p => ({ ...p, yas: undefined })); }}
+                style={fieldErrors.yas ? { borderColor: "var(--danger)", boxShadow: "0 0 0 3px rgba(248,113,113,0.15)" } : {}}
               />
+              {fieldErrors.yas && <span className="field-error">{fieldErrors.yas}</span>}
             </div>
             <div className="form-group">
-              <label>Başlangıç Bütçesi (TL)</label>
+              <label>Başlangıç Bütçesi (TL) <span className="field-required">*</span></label>
               <input
                 type="number"
                 placeholder="Örn: 50000"
                 value={formData.butce}
-                onChange={(e) => setFormData({ ...formData, butce: e.target.value })}
+                onChange={(e) => { setFormData({ ...formData, butce: e.target.value }); setFieldErrors(p => ({ ...p, butce: undefined })); }}
+                style={fieldErrors.butce ? { borderColor: "var(--danger)", boxShadow: "0 0 0 3px rgba(248,113,113,0.15)" } : {}}
               />
+              {fieldErrors.butce && <span className="field-error">{fieldErrors.butce}</span>}
             </div>
             <div className="form-group">
               <label>Hedef Sektör</label>
