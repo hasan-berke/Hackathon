@@ -77,7 +77,7 @@ body{min-height:100%;background:var(--lp-bg)}
 .section-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 12px;border-radius:999px;border:1px solid var(--lp-border-bright);background:var(--lp-accent-dim);color:var(--lp-accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
 .section-eyebrow::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--lp-accent);box-shadow:0 0 8px var(--lp-accent-glow)}
 .section-title{margin-top:18px;font-size:clamp(36px,4.6vw,64px);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:#fff;max-width:18ch}
-.section-title .accent{background:linear-gradient(180deg,#e8ffef 0%,var(--lp-accent) 45%,var(--lp-accent-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:600}
+.section-title .accent{background:linear-gradient(180deg,#e8ffef 0%,var(--lp-accent) 45%,var(--lp-accent-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:600;padding:0 0.25em;display:inline-block;}
 .section-sub{margin-top:18px;color:#888;font-size:17px;line-height:1.55;max-width:60ch}
 .section-head{margin-bottom:80px;text-align:center;display:flex;flex-direction:column;align-items:center}
 .section-head .section-title{text-align:center}.section-head .section-sub{text-align:center}
