@@ -78,7 +78,8 @@ export async function callGemini(systemPrompt, userPrompt) {
       const isRetryable =
         msg.includes("429") || msg.includes("quota") ||
         msg.includes("403") || msg.includes("leaked") ||
-        msg.includes("RESOURCE_EXHAUSTED");
+        msg.includes("RESOURCE_EXHAUSTED") ||
+        msg.includes("503") || msg.includes("500") || msg.includes("Service Unavailable");
 
       if (isRetryable && i < keys.length - 1) {
         console.warn(`[Gemini] Key #${i + 1} başarısız (${msg.slice(0, 60)}...), sonraki key deneniyor.`);
@@ -123,6 +124,9 @@ export function buildErrorResponse(err, status = 500) {
     } else if (err.message.includes("429") || err.message.includes("quota")) {
       mesaj = "Gemini API kotası aşıldı. Lütfen birkaç dakika sonra tekrar deneyin.";
       status = 429;
+    } else if (err.message.includes("503") || err.message.includes("Service Unavailable")) {
+      mesaj = "Google yapay zeka sunucularında şu an aşırı yoğunluk var (503). Lütfen birkaç saniye bekleyip tekrar deneyin.";
+      status = 503;
     } else if (err.message.includes("JSON") || err.message instanceof SyntaxError) {
       mesaj = "Yapay zeka geçerli bir JSON yanıtı döndürmedi. Lütfen tekrar deneyin.";
       status = 502;
